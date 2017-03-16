@@ -22,9 +22,10 @@ public class MaoPaoTest {
             //-1：避免角标越界
             for (int j=0;j<arr.length-i-1;j++){
                 if(arr[j]>arr[j+1]){
-                    int temp= arr[j];
-                    arr[j] = arr[j+1];
-                    arr[j+1] = temp;
+                    //int temp= arr[j];
+                    //arr[j] = arr[j+1];
+                    //arr[j+1] = temp;
+                    swap(arr,j,j+1);
                 }
             }
         }
@@ -40,9 +41,10 @@ public class MaoPaoTest {
         for (int x=0;x<arr2.length-1;x++){
             for (int y=0;y<arr2.length-x-1;y++){
                 if (arr2[y]>arr2[y+1]){
-                    int temp = arr2[y];
-                    arr2[y] = arr2[y+1];
-                    arr2[y+1] = temp;
+                    //int temp = arr2[y];
+                    //arr2[y] = arr2[y+1];
+                    //arr2[y+1] = temp;
+                    swap(arr2,y,y+1);
                 }
             }
         }
@@ -53,12 +55,19 @@ public class MaoPaoTest {
         for (int k=0;k<arr3.length-1;k++){
             for (int z=0;z<arr3.length-k-1;z++){
                 if (arr3[z]>arr3[z+1]){
-                    int temp = arr3[z];
-                    arr3[z] = arr3[z+1];
-                    arr3[z+1] = temp;
+                    //int temp = arr3[z];
+                    //arr3[z] = arr3[z+1];
+                    //arr3[z+1] = temp;
+                    swap(arr3,z,z+1);
                 }
             }
         }
         print(arr3);
+    }
+
+    private static void swap(int[] arr,int a,int b){
+        int temp = arr[a];
+        arr[a] = arr[b];
+        arr[b] = temp;
     }
 }
